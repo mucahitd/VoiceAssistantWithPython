@@ -57,7 +57,7 @@ class Command():
 
 
     def youtube(self):
-        url = "https://www.googleapis.com/youtube/v3/channels?part=statistics&forUsername=pewdiepie&fields=items/statistics/subscriberCount&key=AIzaSyDjhNNVNMfw3rT3eB2u5JJyCxDA-CeVpIQ"
+        url = "https://www.googleapis.com/youtube/v3/channels?part=statistics&forUsername=pewdiepie&fields=items/statistics/subscriberCount&key=[YOUR API KEY]"
         data = urllib.request.urlopen(url).read()
 
         self.SubscriberCount = json.loads(data)["items"][0]["statistics"]["subscriberCount"]
